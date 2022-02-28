@@ -5,7 +5,8 @@
       <map>
         <entry key="..\:/GitFolders/SqliteApplication/app/src/main/res/layout/activity_add.xml" value="0.2222222222222222" />
         <entry key="..\:/GitFolders/SqliteApplication/app/src/main/res/layout/activity_main.xml" value="0.3" />
-        <entry key="..\:/GitFolders/SqliteApplication/app/src/main/res/layout/my_row.xml" value="0.16266944734098018" />
+        <entry key="..\:/GitFolders/SqliteApplication/app/src/main/res/layout/activity_update.xml" value="0.3" />
+        <entry key="..\:/GitFolders/SqliteApplication/app/src/main/res/layout/my_row.xml" value="0.2222222222222222" />
       </map>
     </option>
   </component>
