@@ -1,5 +1,6 @@
 package com.example.sqliteapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -17,10 +18,12 @@ import java.util.ArrayList;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private Context context;
+    Activity activity;
     private ArrayList book_id, book_title, book_author, book_pages;
 
 
-    public CustomAdapter(Context context, ArrayList book_id, ArrayList book_title, ArrayList book_author, ArrayList book_pages) {
+    public CustomAdapter(Activity activity, Context context, ArrayList book_id, ArrayList book_title, ArrayList book_author, ArrayList book_pages) {
+        this.activity = activity;
         this.context = context;
         this.book_id = book_id;
         this.book_title = book_title;
@@ -48,7 +51,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             intent.putExtra("title", String.valueOf(book_title.get(position)));
             intent.putExtra("author", String.valueOf(book_author.get(position)));
             intent.putExtra("pages", String.valueOf(book_pages.get(position)));
-            context.startActivity(intent);
+            activity.startActivityForResult(intent, 1);
         });
     }
 

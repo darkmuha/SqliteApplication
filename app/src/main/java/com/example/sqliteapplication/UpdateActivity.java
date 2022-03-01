@@ -24,13 +24,19 @@ public class UpdateActivity extends AppCompatActivity {
         author_input = findViewById(R.id.author_input2);
         pages_input = findViewById(R.id.pages_input2);
         update_button = findViewById(R.id.update_button);
+        getAndSetIntentData();
+
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                DataBaseHelper myDB = new DataBaseHelper(UpdateActivity.this);
+                title = title_input.getText().toString().trim();
+                author = author_input.getText().toString().trim();
+                pages = pages_input.getText().toString().trim();
+                myDB.updateData(id, title, author, pages);
             }
         });
-        getAndSetIntentData();
+
     }
 
     void getAndSetIntentData() {
